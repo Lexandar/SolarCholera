@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#FFFFFF">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+      	>
+
+		<Button
+			android:id="@+id/buttonLoad"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:background="@drawable/load" />
+
+		<Button
+	        android:id="@+id/buttonRotate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="50dp"
+	        android:background="@drawable/rotate" />
+    </LinearLayout>
+
+    <zhengda.solarcholera.FluoLabGraphView
+		android:id="@+id/graphView"
+		android:layout_width="wrap_content"
+		android:layout_height="650dp" />
+	      
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	>
+		
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1">
+    		<ImageView
+  			    android:id="@+id/leftEdge"
+   				android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_gravity="left"
+        		android:contentDescription="leftedge"
+        		android:src="@drawable/blank" />
+    	</LinearLayout>
+    	
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1">
+    		<ImageView
+  			    android:id="@+id/rightEdge"
+   				android:layout_width="30dp"
+        		android:layout_height="30dp"
+        		android:layout_gravity="right"
+        		android:contentDescription="rightedge"
+        		android:src="@drawable/blank" />
+    	</LinearLayout>
+   
+    </LinearLayout>
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:stretchColumns="0,1,2,3">
+        <TableRow >
+            <ImageView 
+                android:id="@+id/channelcheck0"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:src="@drawable/blank" />
+            <ImageView 
+                android:id="@+id/channelcheck1"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:src="@drawable/blank" />
+            <ImageView 
+                android:id="@+id/channelcheck2"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:src="@drawable/blank" />
+            <ImageView 
+                android:id="@+id/channelcheck3"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:src="@drawable/blank" />    
+        </TableRow>
+        
+    </TableLayout>
+
+    
+
+</LinearLayout>
+
+   

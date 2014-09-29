@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="50dp"
+    	android:layout_marginBottom="50dp"
+    	android:paddingLeft="50dp">
+      	
+        <TextView 
+        android:id="@+id/denature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solar-incubator\ntemperature:"
+        android:layout_alignParentLeft="true"
+        android:textSize="40sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        />
+        
+        <ImageView 
+        android:id="@+id/in_range0"
+        android:layout_alignParentRight="true"
+        android:layout_width="80sp"
+        android:layout_height="100sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_check"
+        />
+        
+        <TextView
+        android:id="@+id/temp0"
+        android:layout_toLeftOf="@id/in_range0"
+        android:layout_width="wrap_content"
+        android:layout_height="100sp"
+        android:text="@string/cel"
+        android:textSize="40sp"
+        android:padding="10dp"
+        android:paddingRight="0dp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        />
+        
+        
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+      	
+        <TextView 
+        android:id="@+id/extense"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/extense"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:paddingLeft="15dp"
+        android:textColor="#00FF00"
+        />
+        
+        <ImageView 
+        android:id="@+id/in_range1"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="0sp"
+        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_check"
+        />
+        
+        <TextView
+        android:id="@+id/temp1"
+        android:layout_toLeftOf="@id/in_range1"
+		android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/cel"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:paddingRight="0dp"
+        android:textColor="#00FF00"
+        />
+    </RelativeLayout>
+        
+    <RelativeLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+              	
+        <TextView 
+        android:id="@+id/anneal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/anneal"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:paddingLeft="15dp"
+        android:textColor="#0000FF"
+        />
+        <ImageView 
+        android:id="@+id/in_range2"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="0sp"
+        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_check"
+        />
+        
+        <TextView
+        android:id="@+id/temp2"
+		android:layout_toLeftOf="@id/in_range2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/cel"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:paddingRight="0dp"
+        android:textColor="#0000FF"
+        />
+    </RelativeLayout>
+    
+<!--     <LinearLayout 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="left"
+    	android:orientation="horizontal">
+        <Button 
+            android:id="@+id/ZoomIn"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textSize="25sp"
+    		android:background="@drawable/right_edgeicon"
+            />
+        <Button 
+            android:id="@+id/ZoomOut"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textSize="25sp"
+    		android:background="@drawable/left_edgeicon"
+            />
+        
+        
+    </LinearLayout>
+ -->
+    <zhengda.solarcholera.TempTrndGraphView
+        android:id="@+id/graphView"
+        android:layout_width="wrap_content"
+        android:layout_height="530dp" />
+     
+    <LinearLayout 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android:orientation="horizontal">
+        <View
+        	android:layout_width="0dp"
+        	android:layout_weight="1.0"
+        	android:layout_height="0dp"/>
+        <Button 
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textSize="25sp"
+    		android:text="Save"
+            />
+        <View
+        	android:layout_width="0dp"
+        	android:layout_weight="1.0"
+        	android:layout_height="0dp"/>
+        
+        <ToggleButton
+        	android:id="@+id/Lock"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textSize="25sp"
+        	android:textOn="Locked"
+        	android:textOff="Lock!"
+        	/>
+        <View
+        	android:layout_width="0dp"
+        	android:layout_weight="1.0"
+        	android:layout_height="0dp"/>
+        
+    </LinearLayout>
+    
+    
+</LinearLayout>

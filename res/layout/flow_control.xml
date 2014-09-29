@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/flow_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="25dip"
+            android:paddingTop="25dip"
+            android:text="0.0μL/min"
+            android:textColor="#000000"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/rpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="25dip"
+            android:text="0.0RPM"
+            android:textColor="#000000"
+            android:textSize="20dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dip" 
+        android:layout_weight="1">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="2000"
+            android:progress="0" />
+    </LinearLayout>
+
+    <!--
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+                
+        <TextView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="25dip"
+            android:textSize="30dip"
+            android:layout_alignParentLeft="true"
+            android:text="Backward"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="25dip"
+            android:layout_alignParentRight="true"
+            android:text="Forward"
+            android:textSize="30dip" />
+        
+    </RelativeLayout>
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:paddingTop="25dip"
+        android:layout_weight="1"
+        >
+
+        <ToggleButton
+            android:id="@+id/flow_forward"
+            android:layout_width="90dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:textOff="Pump\nForward"
+            android:textOn="Forward\nOn"
+            android:textSize="15dip" />
+
+        <Button
+            android:id="@+id/reset_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Reset"
+            android:textSize="15dip" />
+
+        <ToggleButton
+            android:id="@+id/flow_backward"
+            android:layout_width="90dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:checked="false"
+            android:textOff="Pump\nBackward"
+            android:textOn="Backward\nOn"
+            android:textSize="15dip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/flow_vol"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="5dip"
+        android:text="0.0μL in 0s"
+        android:textColor="#000000"
+        android:textSize="20dip" 
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="15dip"
+        android:layout_weight="1">
+
+        <SeekBar
+            android:id="@+id/seekBarVol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="0" />
+    </LinearLayout>
+    
+    <RadioGroup
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingTop="10dip"
+    android:checkedButton="@+id/s0"
+    android:id="@+id/Speed"
+    android:layout_weight="1">
+
+    <RadioButton 
+        android:textSize="15dip"
+    	android:text="Slow"
+    	android:id="@+id/s0"
+    />
+     <RadioButton
+         android:textSize="15dip" 
+    	android:text="Normal"
+    	android:id="@+id/s1"
+    />
+     <RadioButton 
+         android:textSize="15dip"
+    	android:text="Fast"
+    	android:id="@+id/s2"
+    />
+</RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="0dip" 
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/inject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Inject"
+            android:textSize="15dip" />
+
+        <Button
+            android:id="@+id/extract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Extract"
+            android:textSize="15dip" />
+    </RelativeLayout>
+       "
+
+</LinearLayout>
